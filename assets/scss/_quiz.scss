@@ -1,0 +1,81 @@
+body {
+    background-color: #eaeabd;
+}
+
+.progress-group {
+    color: $card-primary;
+    .progress-line {
+        height: 5px;
+        background-color: #ccc;
+        .line {
+            width: 16.666666666666667%;
+            height: 100%;
+            background-color: $card-primary;
+            transition: width 0.3s;
+        }
+    }
+}
+
+.quiz, .result {
+    .btn {
+        &:not(.btn-link) {
+            border-radius: 100px;
+            border: 0;
+            white-space: break-spaces;
+        }
+        &.btn-link {
+            color: #999;
+            text-decoration: underline;
+            text-underline-position: under;
+            &:hover {
+                color: #666;
+            }
+        }
+    }
+}
+
+.quiz-group {
+    overflow: hidden;
+    .quiz-wrap {
+        display: flex;
+        width: 600%;
+        padding-top: 3rem;
+        transition: margin-left 0.3s;
+    }
+}
+
+.quiz {
+    flex: 1 0 0%;
+    flex-shrink: 0;
+    .btn {
+        &:not(.btn-link) {
+            color: $card-primary;
+            font-size: 1.125rem;
+            background-color: white;
+            &:hover {
+                color: white;
+                background-color: $card-primary;
+            }
+        }
+    }
+    &.quiz-1 {
+        .btn-link {
+            display: none !important;
+        }
+    }
+}
+
+.result {
+    display: none;
+    em, .type {
+        color: $card-primary;
+    }
+    .btn-primary {
+        color: white;
+        background-color: $card-primary;
+        box-shadow: 0 0 10px rgba(black, 0.2);
+        &:hover {
+            background-color: darken($card-primary, 10%);
+        }
+    }
+}
