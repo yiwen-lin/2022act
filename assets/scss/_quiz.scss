@@ -3,14 +3,14 @@ body {
 }
 
 .progress-group {
-    color: $card-primary;
+    color: $color-second;
     .progress-line {
         height: 5px;
         background-color: #ccc;
         .line {
             width: 16.666666666666667%;
             height: 100%;
-            background-color: $card-primary;
+            background-color: $color-second;
             transition: width 0.3s;
         }
     }
@@ -31,6 +31,9 @@ body {
                 color: #666;
             }
         }
+        &:focus {
+            box-shadow: none;
+        }
     }
 }
 
@@ -49,12 +52,12 @@ body {
     flex-shrink: 0;
     .btn {
         &:not(.btn-link) {
-            color: $card-primary;
+            color: $color-second;
             font-size: 1.125rem;
             background-color: white;
             &:hover {
                 color: white;
-                background-color: $card-primary;
+                background-color: $color-second;
             }
         }
     }
@@ -68,14 +71,14 @@ body {
 .result {
     display: none;
     em, .type {
-        color: $card-primary;
+        color: $color-second;
     }
     .btn-primary {
         color: white;
-        background-color: $card-primary;
+        background-color: $color-second;
         box-shadow: 0 0 10px rgba(black, 0.2);
         &:hover {
-            background-color: darken($card-primary, 10%);
+            background-color: darken($color-second, 10%);
         }
     }
 }
