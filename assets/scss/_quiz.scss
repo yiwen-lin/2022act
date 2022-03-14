@@ -57,7 +57,7 @@ body {
             background-color: white;
             &:hover {
                 color: white;
-                background-color: $color-second;
+                background-color:  lighten($color-second,10%);
             }
         }
     }
