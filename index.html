@@ -126,7 +126,7 @@
   </header>
 
   <!-- op -->
-  <div class="main-kv" data-category="web_web" data-action="24-solar-term" data-label="section-1">
+  <div class="main-kv" id="main-kv" data-category="web_web" data-action="24-solar-term" data-label="section-1">
     <div class="table-cell">
 
       <div class="index-box">
@@ -149,44 +149,45 @@
   <!-- main-container -->
   <div class="main-container">
     <!-- fix ad -->
-    <!-- <div class="fix-right">
-      <a href="" class="close-btn">
+    <div class="fix-right" id="fix-right">
+      <div class="close-btn" id="hide">
         <img src="assets/images/close-btn.svg" alt="">
-      </a>
-      <img src="assets/images/book.png" alt="" class="book-img">
+      </div>
+      
       <a href="" target="_blank">
+        <img src="assets/images/book.png" alt="" class="book-img">
         <h6 class="text-center">Buy Me</h6>
       </a>
-    </div> -->
+    </div> 
 
     <!-- s1 exam 人生期末考 -->
     <section id="exam" class="exam" data-category="web_web" data-action="24-solar-term" data-label="section-2">
       <div class="container">
-        <div class="title">
+        <div class="title col-md-8 offset-md-2">
           <h1>人生期末考</h1>
           <p>我是假前言，我是假前言我是假前言，我是假前言，我是假前言。我是假前言，我是假前言我是假前言，我是假前言，我是假前言。</p>
         </div>
       </div>
 
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <div class="progress-group">
-            <div class="progress-number d-flex align-items-baseline">
-              <div class="h2 mb-0">1</div>
-              <div class="h6 mb-0">/6</div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="progress-group">
+              <div class="progress-number d-flex align-items-baseline">
+                <div class="h2 mb-0">1</div>
+                <div class="h6 mb-0">/6</div>
+              </div>
+              <div class="progress-line">
+                <div class="line"></div>
+              </div>
             </div>
-            <div class="progress-line">
-              <div class="line"></div>
+            <div class="quiz-group">
+              <div class="quiz-wrap"></div>
             </div>
-          </div>
-          <div class="quiz-group">
-            <div class="quiz-wrap"></div>
-          </div>
-          <div class="result py-5"></div>
+            <div class="result py-5"></div>
 
+          </div>
         </div>
-      </div>
     </section>
 
     <!-- s2 cerebrity 名人故事 -->
@@ -365,18 +366,23 @@
             <div class="flexslider">
               <ul class="slides col-md-10 offset-md-1">
                 <li>
+                  <h2>1.條文目的與定義為何？</h2>
                   <div class="bag-img bag-1"></div>
                 </li>
                 <li>
+                  <h2>2.適用條件範圍有何差異？</h2>
                   <div class="bag-img bag-2"></div>
                 </li>
                 <li>
+                  <h2 class="h2-s">3.條件認定範圍應符合哪些需求？</h2>
                   <div class="bag-img bag-3"></div>
                 </li>
                 <li>
+                  <h2>4.醫師須向誰告知病情？</h2>
                   <div class="bag-img bag-4"></div>
                 </li>
                 <li>
+                  <h2>5.誰決定是否預立醫療？</h2>
                   <div class="bag-img bag-5"></div>
                 </li>
               </ul>
@@ -387,31 +393,258 @@
       </div>
     </section>
 
-    <!-- s5 act_question  關鍵問題 -->
-    <section id="act_question" data-category="web_web" data-action="24-solar-term" data-label="section-2">
+    <!-- s5 act_question 五個問題 -->
+    <section id="act_question" class="act_question" data-category="web_web" data-action="24-solar-term"
+      data-label="section-2">
       <div class="container">
-        <div class="title">
-          <h1>5個關鍵問題 輕鬆認識《病主法》</h1>
-          <p>跟著節氣養生調養身心前，先從確認自己屬於哪一種體質開始。</p>
+        <div class="title col-md-8 offset-md-2">
+          <h1>5個關鍵問題<br>輕鬆認識《病主法》</h1>
+          <p>我是假前言，我是假前言我是假前言，我是假前言，我是假前言。我是假前言，我是假前言我是假前言，我是假前言，我是假前言。我是假前言，我是假前言我是假前言，我是假前言，我是假前言。</p>
+          <h6>資料來源：社團法人台灣生命教育學會病人自主研究中心</h6>
         </div>
       </div>
-      <div class="container" id="">
+      <div class="container">
         <div class="row">
+          <!-- Q1 -->
+          <div class="col-md-10 offset-md-1">
+            <div class="question text-center">
+              <img src="assets/images/chart/Q1.png" alt="">
+              <h2>什麼是《病人自主權立法》？</h2>
+            </div>
+            <div class="answer answer1">
+              <ul>
+                <li>
+                  <img src="assets/images/chart/chart1-1.png" alt="">
+                  <div class="txt-wrap">
+                    <h3>病人自主</h3>
+                    <p>在醫療情境中，病人具優先的知情、選擇</p>
+                  </div>
+                </li>
+                <li>
+                  <img src="assets/images/chart/chart1-2.png" alt="">
+                  <div class="txt-wrap">
+                    <h3>善終保障</h3>
+                    <p>依照法定程序，簽署預立醫療決定，事先表達特定情況下的醫療意願</p>
+                  </div>
+                </li>
+                <li>
+                  <img src="assets/images/chart/chart1-3.png" alt="">
+                  <div class="txt-wrap">
+                    <h3>醫病和諧</h3>
+                    <p>醫療專業和病人自主間取得平衡，醫師協助病人善終有法律保障</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Q2 -->
+          <div class="col-md-8 offset-md-2">
+            <div class="question text-center">
+              <img src="assets/images/chart/Q2.png" alt="">
+              <h2 class="even-h2">什麼是《病人自主權立法》？</h2>
+            </div>
+            <div class="answer answer2"> </div>
+          </div>
+          <!-- Q3 -->
+          <div class="col-md-12">
+            <div class="question text-center">
+              <img src="assets/images/chart/Q3.png" alt="">
+              <h2>5種臨床條件有哪些？</h2>
+            </div>
+            <div class="answer answer3">
+              <ul>
+                <li class="answer-block">
+                  <img src="assets/images/chart/chart4-1.png" alt="">
+                  <div class="txt-wrap">
+                    <h3>末期病人</h3>
+                    <ul class="answer-list">
+                      <li>嚴重傷病</li>
+                      <li>不可治癒</li>
+                      <li>經醫師診斷近期內死亡不可避免</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="answer-block">
+                  <img src="assets/images/chart/chart4-2.png" alt="">
+                  <div class="txt-wrap">
+                    <h3>不可逆轉昏迷</h3>
+                    <ul class="answer-list">
+                      <li>因腦部病變，重度且持續昏迷</li>
+                      <li>經2位神經醫學相關專科醫師確診</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="answer-block">
+                  <img src="assets/images/chart/chart4-3.png" alt="">
+                  <div class="txt-wrap">
+                    <h3>永久植物人狀態</h3>
+                    <ul class="answer-list">
+                      <li>因腦部病變，顯示為永久植物人狀態</li>
+                      <li>經2位神經醫學相關專科醫師確診</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="answer-block">
+                  <img src="assets/images/chart/chart4-4.png" alt="">
+                  <div class="txt-wrap">
+                    <h3>極重度失智</h3>
+                    <ul class="answer-list">
+                      <li>失智為CDR 3分及FAST 7分達極重度程度</li>
+                      <li>經2位神經醫學相關專科醫師確診</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="answer-block">
+                  <img src="assets/images/chart/chart4-5.png" alt="">
+                  <div class="txt-wrap">
+                    <h3>其他經政府公告之疾病或情形</h3>
+                    <ul class="answer-list answer-list-last">
+                      <li>1. 痛苦難以忍受</li>
+                      <li>2. 疾病無法治癒</li>
+                      <li>3. 依當時醫療水準沒有其他解決方法</li>
+                      <li>4. 經政府公告</li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Q4 -->
+          <div class="col-md-8 offset-md-2">
+            <div class="question text-center">
+              <img src="assets/images/chart/Q4.png" alt="">
+              <h2 class="even-h2">預立醫療決定（AD）啟動流程是什麼？</h2>
+            </div>
+            <div class="answer answer4"> </div>
+          </div>
+          <!-- Q5 -->
+          <div class="col-md-8 offset-md-2">
+            <div class="question text-center question5">
+              <img src="assets/images/chart/Q5.png" alt="">
+              <h2>參與預立醫療照護諮商（ACP）時，需邀請的「醫療委任代理人」 與「二親等」有什麼不同？</h2>
+            </div>
+            <p>在簽署預立醫療遺囑（AD），一定要先進行預約預立醫療照護諮商（ACP)，其中必須邀請二親等內親屬，以及醫療委任代理人，兩者有何不同？</p>
 
+            <div class="answer answer5">
+              <ul>
+                <li>
+                  <img src="assets/images/chart/chart5-1.png" alt="">
+                  <div class="txt-wrap">
+                    <h3>醫療委任代理人</h3>
+                    <p><strong>若有指定，則一定要參與</strong></p>
+                    <p>代理人的工作是幫您表達你的臨終意願，法律並未賦予他修改的權利，所以進行ACP時，請務必邀請出席參與諮商會議，才能保障您的權利。</p>
+                  </div>
+                </li>
+                <li>
+                  <img src="assets/images/chart/chart5-2.png" alt="">
+                  <div class="txt-wrap">
+                    <h3>二親等家屬</h3>
+                    <p><strong>至少一位，且一定要參與</strong></p>
+                    <p>ACP重點是讓家庭共榮、開啟對話、彼此了解醫療決定，還是建議有二等親一同出席互相了解！</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
 
         </div>
       </div>
     </section>
 
     <!-- s6 faq  常見問題 -->
-    <section id="faq" data-category="web_web" data-action="24-solar-term" data-label="section-2">
+    <section id="faq" class="faq" data-category="web_web" data-action="24-solar-term" data-label="section-2">
       <div class="container">
         <div class="title">
           <h1>常見問題</h1>
         </div>
       </div>
-      <div class="container" id="">
+      <div class="container">
         <div class="row">
+
+          <div class="accordion__group col-md-8 offset-md-2">
+            <div class="accordion__item">
+              <div class="accordion__item__header">
+                <span class="number">1.</span><span class="txt">我可以去哪裡簽署預立醫療決定書（AD）?</span>
+                <img class="icon icon-plus" src="assets/images/icon-plus.svg" alt="">
+                <!-- 展開後 img換成:icon-minus -->
+              </div>
+              <div class="accordion__item__panel">
+                <p class="mt0">可以前往您鄰近，且有提供<a href="https://lihi1.cc/1Mpie" target="_blank" class="btn--text">醫療照護諮商的機構</a>進行諮商、簽署。</p>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <div class="accordion__item__header">
+                <span class="number">2.</span><span class="txt">我預立的醫療決定書（AD）可以更改嗎？</span>
+                <img class="icon icon-plus" src="assets/images/icon-plus.svg" alt="">
+              </div>
+              <div class="accordion__item__panel">
+                <p class="mt0">可以，已經預立的醫療決定書，可以隨時以書面方式撤回或變更，也可洽預立<a href="https://lihi1.cc/1Mpie" target="_blank" class="btn--text">醫療照護諮商機構</a>。</p>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <div class="accordion__item__header">
+                <span class="number">3.</span><span class="txt">什麼是醫療委任代理人？</span>
+                <img class="icon icon-plus" src="assets/images/icon-plus.svg" alt="">
+              </div>
+              <div class="accordion__item__panel">
+                <p class="mt0">待捕字</p>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <div class="accordion__item__header">
+                <span class="number">4.</span><span class="txt">病主法是安樂死嗎？</span>
+                <img class="icon icon-plus" src="assets/images/icon-plus.svg" alt="">
+              </div>
+              <div class="accordion__item__panel">
+                <p class="mt0">不是，病主法的生命長度強調「不加工延長生命」，醫師扮演「給予緩和醫療」的角色；而安樂死為「加工縮短生命」，醫師「為病人施行致命藥物／給致命藥物，病人自行服用」，兩種本質意義並不相同。</p>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <div class="accordion__item__header">
+                <span class="number">5.</span><span class="txt">預立醫療照護諮詢（ACP）需要收費嗎？</span>
+                <img class="icon icon-plus" src="assets/images/icon-plus.svg" alt="">
+              </div>
+              <div class="accordion__item__panel">
+                <p class="mt0">是的，目前預立醫療照護諮商尚未獲得政府給付，各諮商院所皆會收費。若您的狀況特殊，需要協助，可與社團法人台灣生命教育學會病人自主研究中心接洽，將有專員為您服務，並盡力協助您排除困難。</p>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <div class="accordion__item__header">
+                <span class="number">6.</span><span class="txt">簽了預立醫療決定書（AD）之後，是不是等於放棄急救，我就不會被得救了呢？</span>
+                <img class="icon icon-plus" src="assets/images/icon-plus.svg" alt="">
+              </div>
+              <div class="accordion__item__panel">
+                <p class="mt0">1. 任何危急時刻，無論有無簽署「預立醫療決定（AD）」，醫療團 隊一定都會救。</p>
+                <p>2. 執行AD，您必須符合5種臨床條件才會進入病主法程序</p>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <div class="accordion__item__header">
+                <span class="number">7.</span><span class="txt">拒絕人工營養及流體餵養（鼻胃管、胃造廔管等），是不是會把人餓死?</span>
+                <img class="icon icon-plus" src="assets/images/icon-plus.svg" alt="">
+              </div>
+              <div class="accordion__item__panel">
+                <p class="mt0">不是。人在符合《病主法》中的五種特定情況下，若還能夠進食， 可以透過細心的人工餵食，讓病人感受到舒適尊嚴的照顧。若病人 身體機能減緩,給予過多的水分、養分，反而會增加身體的負擔。 拒絕後，身體回歸自然關機狀態，腦袋會釋放腦內啡，若為臨終病 人，通常不會有飢餓感，而且有緩和醫療照護，能提供身心靈舒適 尊嚴的善終。</p>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <div class="accordion__item__header">
+                <span class="number">8.</span><span class="txt">家人可以幫我簽預立醫療決定書（AD）？</span>
+                <img class="icon icon-plus" src="assets/images/icon-plus.svg" alt="">
+              </div>
+              <div class="accordion__item__panel">
+                <p class="mt0">不行，AD一定要由本人親自簽署才具有法律效力。這是我們為家人預備的一份「愛的禮物」，在保障我們 自主意願的同時，更要預防家人身心受苦，因此我們的意願一定要自己表達、自己作主，並和家人充份溝通，這也是對自我生命負責任的展現。</p>
+              </div>
+            </div>
+
+          </div> <!-- accordion__group end -->
 
 
         </div>
@@ -419,38 +652,64 @@
     </section>
 
     <!-- s7 publication 出版商品導購區塊 -->
-    <section id="publication" data-category="web_web" data-action="24-solar-term" data-label="section-2">
+    <section id="publication" class="publication" data-category="web_web" data-action="24-solar-term"
+      data-label="section-2">
       <div class="container">
         <div class="title">
           <h1>出版商品導購區塊</h1>
         </div>
       </div>
-      <div class="container" id="">
+      <div class="container">
         <div class="row">
-
+          <div class="col-md-4 public-block">
+            <a href="">
+              <img
+                src="https://ch-image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fas.chdev.tw%2Fweb%2Farticle%2Fe%2F7%2F4%2Fe0639435-7887-483a-9fb4-8a607c87e00e1647253503.jpg/?w=380"
+                alt="">
+              <p>出版商品導購區塊出版商品導購區塊</p>
+            </a>
+          </div>
+          <div class="col-md-4 public-block">
+            <a href="">
+              <img
+                src="https://ch-image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fas.chdev.tw%2Fweb%2Farticle%2Fe%2F7%2F4%2Fe0639435-7887-483a-9fb4-8a607c87e00e1647253503.jpg/?w=380"
+                alt="">
+              <p>出版商品導購區塊出版商品導購區塊</p>
+            </a>
+          </div>
+          <div class="col-md-4 public-block">
+            <a href="">
+              <img
+                src="https://ch-image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fas.chdev.tw%2Fweb%2Farticle%2Fe%2F7%2F4%2Fe0639435-7887-483a-9fb4-8a607c87e00e1647253503.jpg/?w=380"
+                alt="">
+              <p>出版商品導購區塊出版商品導購區塊</p>
+            </a>
+          </div>
 
         </div>
       </div>
     </section>
 
     <!-- s8 cooperate 協力單位 -->
-    <section id="cooperate" data-category="web_web" data-action="24-solar-term" data-label="section-2">
+    <section id="cooperate" class="cooperate" data-category="web_web" data-action="24-solar-term"
+      data-label="section-2">
       <div class="container">
         <div class="title">
           <h1>協力單位</h1>
         </div>
       </div>
-      <div class="container" id="">
+      <div class="container">
         <div class="row">
-
-
+          <div class="col-md-4 offset-md-4 col-8 offset-2">
+            <img src="assets/images/parc-logo.png" alt="">
+          </div>
         </div>
       </div>
     </section>
 
 
     <!-- buy -->
-    <section class="buy-block">
+    <!-- <section class="buy-block">
       <div class="container">
         <div class="row">
           <div class="cover col-8 offset-2 col-md-3 offset-md-3"> <a
@@ -464,7 +723,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- facebook 預設要放入的code -->
     <!-- <div id="fb-root"></div>

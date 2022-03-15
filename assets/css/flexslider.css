@@ -96,6 +96,7 @@ html[xmlns] .flexslider .slides {
 }
 .flexslider .slides {
   zoom: 1;
+  padding: 0 50px;
 }
 .flexslider .slides img {
   height: auto;
@@ -288,8 +289,8 @@ html[xmlns] .flexslider .slides {
     right: 0px;
   }
   .flexslider .slides {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   .flex-direction-nav a:before {
     font-size: 22px;
