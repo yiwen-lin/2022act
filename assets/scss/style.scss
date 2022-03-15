@@ -142,8 +142,52 @@ a {
 
 
 // op  -------------------------------
-.main-kv{
+.main-kv {
 	height: 100vh;
+	background-image: linear-gradient(0deg, #EDEDC5 0%, #FDC5A2 50%, #FFEBE9 100%);
+	position: relative;
+	&::after {
+		display: block;
+		content: "";
+		height: 100vh;
+		background: url(../images/pc-bg.png) center no-repeat;
+		background-size: cover;
+		@include mobile {
+			background: url(../images/mb-bg.png) center no-repeat;
+			background-size: cover;
+		}
+	}
+	.index-box {
+		text-align: center;
+		position:absolute;
+		top: 10%;
+		width: 100%;
+		.title-wrap {
+			.sub-title {
+				background-color: #C1E5E4;
+				padding:14px 30px 14px 25px;
+				border:1px solid #333;
+				border-radius: 40px;
+				display: inline-block;
+				line-height: 1;
+			}
+			.op-title {
+				display: block;
+				margin: 30px auto 0;
+
+			}
+			@include mobile {
+				.sub-title {
+					padding: 12px 24px 12px 20px;
+				}
+				.op-title {
+					width: 300px;
+					margin-top: 16px;
+				}
+			}
+		}
+
+	}
 }
 
 //fix right
@@ -152,21 +196,30 @@ a {
 
 	.fix-right {
 		position: fixed;
-		top: 15%;
-		right: 30px;
-		z-index: 10;
+		bottom: 40px;
+		right: 20px;
+		z-index: 20;
 		display: none;
 
 		.close-btn {
 			position: absolute;
-			right: -10px;
-			top: -10px;
+			right: 0px;
+			top: 0px;
 			cursor: pointer;
 		}
 
+		a {
+			margin-top: 6px;
+    		margin-right: 6px;
+			display: block;
+		}
 		.book-img {
 			width: 100px;
 			cursor: pointer;
+		}
+		@include mobile {
+			bottom: 30px;
+			right: 10px;
 		}
 	}
 }

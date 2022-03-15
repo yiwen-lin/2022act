@@ -24,18 +24,28 @@
     }
   });
 
-//click none
-  $(document).ready(function(){
-    $("#hide").click(function(){
-      $(".fix-right").hide();
-    });
+
+//fix show/hide 
+$(window).scroll(function () {
+  // if($(window).innerWidth() <= 769) {
+
+  // }
+  // else {
+    let examTop = $('#exam').offset().top
+
+    if ($(this).scrollTop() > examTop) {
+        $('#fix-right').show(500);
+    } else {
+        $('#fix-right').hide(500);
+    }
+  // }
+});
+
+//fix click none
+$(document).ready(function(){
+  $("#hide").click(function(){
+    // $(".fix-right").hide();
+    $("#fix-right").css("display","none");
   });
-
-
-
-  $(function(){
-    var elem= document.getElementById("exam");
-    $("#fix-right").css("display","block");
-  })
-
+});
   
