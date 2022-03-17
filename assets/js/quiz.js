@@ -131,14 +131,12 @@ $('.quiz button').click(function(e) {
       calculate();
       renew();
       $('.result').show();
-      $('.quiz-6 button').prop('disabled', true);
-      $('html, body').animate({
-        scrollTop: $('.result').offset().top - 100
-      }, 700);
+      $('.progress-group, .quiz-group').slideUp();
     }
   } else if ( $(this).hasClass('btn-back') ) {
     sumArray.pop();
   }
+  console.log(sumArray);
 });
 
 $('.btn-back').click(function(e) {
@@ -149,6 +147,7 @@ $('.btn-back').click(function(e) {
 });
 
 function calculate() {
+  sum = 0;
   sumArray.forEach(item => {
     sum += item;
   });
@@ -195,9 +194,13 @@ function renew() {
   $('.result #renew').click(function(e) {
     console.log(e);
     sumArray = [];
+    buttonIndex = 0;
+    $('.progress-group, .quiz-group').slideDown();
     $('.result').hide();
     $('.quiz-wrap').css('margin-left', 0);
     $('.quiz-6 button').prop('disabled', false);
+    $('.progress-number .h2').text(1);
+    $('.progress-line .line').css('width', 16.666666666666667+'%');
     $('html, body').animate({
       scrollTop: $('#exam').offset().top
     }, 700);

@@ -10,6 +10,11 @@ $shadow:#ccc;
 		@content;
 	}
 }
+@mixin up-mobile {
+	@media only screen and (min-width: 769px) {
+		@content;
+	}
+}
 
 //共用樣式 start =================================
 body {
@@ -219,11 +224,14 @@ a {
 		// width: 100%;
 		position: absolute;
 		bottom: 14px;
-		left: 33.5%;
+		left: 50%;
+		display: flex;
+		white-space: nowrap;
+		transform: translateX(-50%);
 
 		.op-arrow {
-			width: 10.5vw;
-			display: inline-block;
+			flex: 1 0 0%;
+			flex-shrink: 0;
 			img {
 				width: 100%;
 			}
@@ -267,11 +275,11 @@ a {
 				}
 			}
 		}
+		@include up-mobile { 
+			width: 63vh;
+		}
 		@include mobile { 
-			left: 9%;
-			.op-arrow {
-				width: 26vw;
-			}
+			width: 75%;
 		}
 	}
 
@@ -335,6 +343,7 @@ a {
 		right: 20px;
 		z-index: 20;
 		display: none;
+		transition: bottom 0.3s;
 
 		.close-btn {
 			position: absolute;
@@ -357,6 +366,9 @@ a {
 		@include mobile {
 			bottom: 30px;
 			right: 10px;
+			&.scroll {
+				bottom: 130px;
+			}
 		}
 	}
 }
@@ -377,9 +389,12 @@ a {
 
 	//side-nav start
 	.side-nav {
-		position: absolute;
-		right: 0;
-		top: 50px;
+		ul {
+			margin: 0;
+			padding: 0;
+			position: sticky;
+			top: 70px;
+		}
 
 		li {
 			margin-bottom: 26px;
@@ -427,9 +442,9 @@ a {
 		}
 
 		@include mobile {
+			position: fixed;
+			display: none;
 			bottom: 0;
-			top: inherit;
-			right: inherit;
 			left: 0;
 			width: 100%;
 			text-align: center;
@@ -1112,7 +1127,11 @@ a {
 		position: absolute;
 		top: 0;
 		right: 0;
-		padding: 0.9em 1rem;
+		display: none;
+		padding: 1.1355em 1rem;
+		&.active {
+			display: block;
+		}
 	}
 
 	.accordion__group .accordion__item__panel {
