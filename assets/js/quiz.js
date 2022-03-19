@@ -56,7 +56,7 @@ const question = [
     option: [
       {
         content: '可以，病主法就是保障、尊重病人自主',
-        score: 10,
+        score: 0,
       },
       {
         content: '不可以，想簽署AD的意願人必須找二親等內的親屬至少1人及醫療委任代理人（如有指定）共同參與ACP',
