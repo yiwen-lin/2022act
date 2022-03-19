@@ -106,9 +106,33 @@ const result = [
 let str = '';
 question.forEach((item, index) => {
   const template = `<div class="quiz quiz-${index+1}"><h4 class="mb-4">${item.title}</h4>
-  <button type="button" class="btn-option btn w-full py-4 px-5 mt-3 mb-2" data-index="${index+1}" data-score="${item.option[0].score}">${item.option[0].content}</button>
-  <button type="button" class="btn-option btn w-full py-4 px-5 mt-3 mb-2" data-index="${index+1}" data-score="${item.option[1].score}">${item.option[1].content}</button>
-  <button type="button" class="btn-back btn btn-link d-table mx-auto mt-3 mb-2" data-prev="${index}">回上一題</button></div>`;
+  <button
+    type="button"
+    class="btn-option btn w-full py-4 px-5 mt-3 mb-2"
+    data-index="${index+1}"
+    data-score="${item.option[0].score}"
+    eventcategory="web_web"
+    eventaction="advance-decision"
+    eventlabel="click-test-${index+1}-1"
+  >${item.option[0].content}</button>
+  <button
+    type="button"
+    class="btn-option btn w-full py-4 px-5 mt-3 mb-2"
+    data-index="${index+1}"
+    data-score="${item.option[1].score}"
+    eventcategory="web_web"
+    eventaction="advance-decision"
+    eventlabel="click-test-${index+1}-2"
+  >${item.option[1].content}</button>
+  <button 
+    type="button" 
+    class="btn-back btn btn-link d-table mx-auto mt-3 mb-2" 
+    data-prev="${index}"
+    eventcategory="web_web"
+    eventaction="advance-decision"
+    eventlabel="click-test-goback"
+  >回上一題</button>
+</div>`;
   str += template;
 });
 
@@ -184,8 +208,23 @@ function calculate() {
                       <div class="type h4 text-center mb-3">${resultCopy.name}</div>
                       <p>${resultCopy.content}</p>
                       <div class="btn-function text-center mt-5">
-                        <button type="button" id="renew" class="btn btn-link mx-3">再玩一次</button>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://yiwen-lin.github.io/2022act/${resultCopy.link}.html" class="btn btn-primary px-5 py-3 mx-3" target="_blank" rel="noopener noreferrer">分享成績</a>
+                        <button
+                          type="button"
+                          id="renew"
+                          class="btn btn-link mx-3"
+                          eventcategory="web_web"
+                          eventaction="advance-decision"
+                          eventlabel="click-test-again"
+                        >再玩一次</button>
+                        <a
+                          href="https://www.facebook.com/sharer/sharer.php?u=https://yiwen-lin.github.io/2022act/${resultCopy.link}.html"
+                          class="btn btn-primary px-5 py-3 mx-3"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          eventcategory="web_web"
+                          eventaction="advance-decision"
+                          eventlabel="click-test-share"
+                        >分享成績</a>
                       </div>`;
   $('.result').html(resultTemp);
 }
