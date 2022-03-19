@@ -1,9 +1,3 @@
- // solar card - Click to show
-//  function myFunction(season, elm) {
-//     elm.style.display = "none";
-//     document.getElementById("others-"+season).style.display = "block";
-//   }
-
 let width = $(window).width();
 let height = $(window).height();
 
@@ -28,8 +22,9 @@ $('a.smooth-scroll[href*="#"]:not([href="#"])').click(function () {
   }
 });
 
-//fix show/hide 
+
 $(window).scroll(function () {
+    //fix show/hide 
     let scroll = $(this).scrollTop();
     let examTop = $('#exam').offset().top;
 
@@ -39,6 +34,7 @@ $(window).scroll(function () {
         $('#fix-right').hide(500);
     }
 
+    //cerebrity show/hide 
     let cerebrity1Top = $('#cerebrity-1').offset().top - (height / 2);
     let cerebrity2Top = $('#cerebrity-2').offset().top - (height / 2);
     let cerebrity3Top = $('#cerebrity-3').offset().top - (height / 2);
@@ -71,6 +67,8 @@ $(document).ready(function(){
   });
 });
 
+
+//faq
 $(".accordion__group .accordion__item__header").on("click", function() {
   $(this).parent().siblings().children(".accordion__item__panel").slideUp();
   $(this).parent().siblings().children(".accordion__item__header").removeClass("active");
