@@ -185,7 +185,7 @@ function calculate() {
                       <p>${resultCopy.content}</p>
                       <div class="btn-function text-center mt-5">
                         <button type="button" id="renew" class="btn btn-link mx-3">再玩一次</button>
-                        <a href="${resultCopy.link}.html" class="btn btn-primary px-5 py-3 mx-3" target="_blank" rel="noopener noreferrer">分享成績</a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://yiwen-lin.github.io/2022act/${resultCopy.link}" class="btn btn-primary px-5 py-3 mx-3" target="_blank" rel="noopener noreferrer">分享成績</a>
                       </div>`;
   $('.result').html(resultTemp);
 }
