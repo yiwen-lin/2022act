@@ -217,7 +217,7 @@ function calculate() {
                           eventlabel="click-test-again"
                         >再玩一次</button>
                         <a
-                          href="https://www.facebook.com/sharer/sharer.php?u=https://yiwen-lin.github.io/2022act/${resultCopy.link}.html"
+                          href="https://www.facebook.com/sharer/sharer.php?u=https://commonhealth.com.tw/topic/advance-decision/${resultCopy.link}.html"
                           class="btn btn-primary px-5 py-3 mx-3"
                           target="_blank"
                           rel="noopener noreferrer"

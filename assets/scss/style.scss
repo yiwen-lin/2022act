@@ -361,6 +361,10 @@ a {
 			margin-top: 6px;
 			margin-right: 6px;
 			display: block;
+			color: $color-primary;
+			&:hover {
+				color: $color-primary-l;
+			}
 		}
 
 		.book-img {
@@ -383,6 +387,9 @@ a {
 .exam {
 	background-color: #EDEDC5;
 	padding-bottom: 60px;
+	@include mobile {
+		padding-bottom: 0;
+	}
 }
 
 //s2 cerebrity -------------------------------
@@ -399,7 +406,7 @@ a {
 			margin: 0;
 			padding: 0;
 			position: sticky;
-			top: 70px;
+			top: 80px;
 		}
 
 		li {
@@ -584,11 +591,14 @@ a {
 	}
 
 	@include mobile {
+		.line {
+			height: 30px;
+		}
 		.qoute {
 			font-size: 24px;
 
 			span {
-				display: inline-block;
+				display: inline;
 			}
 		}
 	}
