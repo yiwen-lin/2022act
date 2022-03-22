@@ -1188,8 +1188,8 @@ a {
 		text-align: center;
 
 		img {
-			border-radius: 40px;
-			border: 2px solid $color-primary;
+			border-radius: 30px;
+			// border: 2px solid $color-primary;
 			width: 100%;
 		}
 
@@ -1204,6 +1204,21 @@ a {
 		p {
 			margin-top: 12px;
 			font-weight: 400;
+			line-height: 1.5;
+			span {
+				display: block;
+				@include mobile {
+					display:inline;
+				}
+			}
+		}
+		.more {
+			margin-top: 10px;
+			span {
+				color: $color-primary;
+				border-bottom: 2px solid $color-primary;
+				padding-bottom: 2px;
+			}
 		}
 
 		@include mobile {
