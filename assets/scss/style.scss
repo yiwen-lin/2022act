@@ -23,19 +23,18 @@ html, body {
 
 //共用樣式 start =================================
 body {
-	background-color: #FCFCFC;
 	font-family: 'roboto', 'Noto Sans TC', sans-serif;
 	font-weight: 400;
 	font-style: normal;
 	line-height: 1.75;
 	color: #222;
-	background-color: #FBFBFB;
+	background-color: #FFFDF0;
 	overflow-x: hidden;
-	// padding-top: 70px;
+	padding-top: 70px;
 	position: relative;
 
 	@media only screen and (max-width: 1120px) {
-		// padding-top: 56px;
+		padding-top: 56px;
 	}
 }
 
@@ -353,7 +352,7 @@ a {
 		.close-btn {
 			position: absolute;
 			right: 0px;
-			top: 0px;
+			top: 4px;
 			cursor: pointer;
 		}
 
@@ -754,6 +753,10 @@ a {
 			margin-top: 30px;
 		}
 	}
+	.last-h6 {
+		margin-top: 50px;
+		text-align: center;
+	}
 
 	.question {
 		margin-bottom: 30px;
@@ -791,8 +794,6 @@ a {
 			width: calc(100% - 90px);
 		}
 	}
-
-
 
 	.answer {
 		margin-bottom: 130px;
