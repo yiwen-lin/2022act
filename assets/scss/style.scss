@@ -15,6 +15,11 @@ $shadow:#ccc;
 		@content;
 	}
 }
+@mixin ipad {
+	@media only screen and (min-width: 769px) and (max-width: 1000px) {
+		@content;
+	}
+}
 
 html, body {
 	height: 100%;
@@ -39,8 +44,8 @@ body {
 }
 
 .navbar {
-	@include mobile {
-		background-color: #FFFF;
+	@media (max-width: 1000px) {
+		background-color: #FFF;
 	}
 }
 
@@ -171,6 +176,11 @@ a {
 			background: url(../images/mb-bg.png) bottom center no-repeat;
 			background-size: cover;
 		}
+
+		@include ipad {
+			background: url(../images/mb-bg.png) bottom center no-repeat;
+			background-size: cover;
+		}
 	}
 
 	.index-box {
@@ -210,7 +220,7 @@ a {
 			}
 
 			@include mobile {
-				margin-top: 110px;
+				margin-top: 60px;
 				.sub-title {
 					padding: 12px 24px 12px 20px;
 				}
@@ -309,6 +319,7 @@ a {
 
 			@include mobile {
     			left: -28px;
+				width: 150px;
 			}
 		}
 		&.cloud-2 {
@@ -329,6 +340,7 @@ a {
 
 			@include mobile {
     			right: -70px;
+				width: 140px;
 			}
 		}
 		img {
@@ -454,6 +466,36 @@ a {
 		}
 
 		@include mobile {
+			position: fixed;
+			display: none;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			background-color: #FDC5A2;
+			box-shadow: 0 -1px 8px #d2b29d;
+
+			ul {
+				padding-left: 0;
+				margin: auto;
+
+				li {
+					display: inline-block;
+					margin: 10px 16px;
+
+					img {
+						width: 70px;
+					}
+
+					h6 {
+						color: #484b4e;
+						font-size: 13px;
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		@include ipad {
 			position: fixed;
 			display: none;
 			bottom: 0;
@@ -810,7 +852,7 @@ a {
 		&.answer1 {
 			li {
 				display: inline-block;
-				width: 33%;
+				width: 32.5%;
 				padding: 0 30px;
 				vertical-align: top;
 
@@ -901,10 +943,11 @@ a {
 				ul.answer-list {
 					font-size: 18px;
 					font-weight: 300;
-					list-style: auto;
+					list-style: decimal;
 					padding-left: 20px;
 
 					li {
+						list-style: decimal;
 						// margin-bottom:4px;
 					}
 
@@ -917,7 +960,7 @@ a {
 				}
 			}
 
-			@include mobile {
+			@media (max-width: 1000px) {
 				li.answer-block {
 					display: block;
 					width: 95%;

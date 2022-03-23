@@ -278,7 +278,7 @@ header nav .dropdown-item:hover, header nav .dropdown-item:focus, header nav .dr
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   body {
     /* padding-top: 56px; */
   }

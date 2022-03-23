@@ -248,7 +248,7 @@ function calculate() {
                           eventlabel="click-test-again"
                         >再玩一次</button>
                         <a
-                          href="https://www.facebook.com/sharer/sharer.php?u=https://commonhealth.com.tw/topic/advance-decision/${resultCopy.link}.html"
+                          href="https://www.facebook.com/sharer/sharer.php?u=https://web.commonhealth.com.tw/advance-decision/${resultCopy.link}.html"
                           class="btn btn-primary px-5 py-3 mx-3"
                           target="_blank"
                           rel="noopener noreferrer"
