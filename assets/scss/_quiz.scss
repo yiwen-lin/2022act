@@ -18,6 +18,7 @@ body {
 
 .quiz, .result {
     .btn {
+        position: relative;
         &:not(.btn-link) {
             border-radius: 100px;
             border: 0;
@@ -58,6 +59,13 @@ body {
             &:hover {
                 color: white;
                 background-color: lighten($color-second,10%);
+            }
+            img {
+                position: absolute;
+                bottom: -15px;
+                right: 20px;
+                width: 55px;
+                display: none;
             }
         }
     }

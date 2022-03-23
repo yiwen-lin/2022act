@@ -5,15 +5,21 @@ html, body {
 }
 
 body {
-  background-color: #FCFCFC;
   font-family: 'roboto', 'Noto Sans TC', sans-serif;
   font-weight: 400;
   font-style: normal;
   line-height: 1.75;
   color: #222;
-  background-color: #FBFBFB;
+  background-color: #FFFDF0;
   overflow-x: hidden;
+  padding-top: 70px;
   position: relative;
+}
+
+@media only screen and (max-width: 1120px) {
+  body {
+    padding-top: 56px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -482,7 +488,7 @@ a {
 .main-container .fix-right .close-btn {
   position: absolute;
   right: 0px;
-  top: 0px;
+  top: 4px;
   cursor: pointer;
 }
 
@@ -490,6 +496,11 @@ a {
   margin-top: 6px;
   margin-right: 6px;
   display: block;
+  color: #377CCF;
+}
+
+.main-container .fix-right a:hover {
+  color: #6A9ADD;
 }
 
 .main-container .fix-right .book-img {
@@ -509,6 +520,13 @@ a {
 
 .exam {
   background-color: #EDEDC5;
+  padding-bottom: 60px;
+}
+
+@media only screen and (max-width: 768px) {
+  .exam {
+    padding-bottom: 0;
+  }
 }
 
 .cerebrity {
@@ -525,7 +543,7 @@ a {
   padding: 0;
   position: -webkit-sticky;
   position: sticky;
-  top: 70px;
+  top: 80px;
 }
 
 .cerebrity .side-nav li {
@@ -702,18 +720,21 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
+  .cerebrity .line {
+    height: 30px;
+  }
   .cerebrity .qoute {
     font-size: 24px;
   }
   .cerebrity .qoute span {
-    display: inline-block;
+    display: inline;
   }
 }
 
 .cerebrity .todo-block {
   border: 1px solid #377CCF;
   border-radius: 100px;
-  padding: 40px 80px 50px;
+  padding: 40px 60px 46px;
   margin: 40px auto 26px;
 }
 
@@ -837,6 +858,11 @@ a {
 
 .act_question .title h6 {
   margin-top: 30px;
+}
+
+.act_question .last-h6 {
+  margin-top: 50px;
+  text-align: center;
 }
 
 .act_question .question {
@@ -1228,8 +1254,7 @@ a {
 }
 
 .publication .public-block img {
-  border-radius: 40px;
-  border: 2px solid #377CCF;
+  border-radius: 30px;
   width: 100%;
 }
 
@@ -1244,6 +1269,27 @@ a {
 .publication .public-block p {
   margin-top: 12px;
   font-weight: 400;
+  line-height: 1.5;
+}
+
+.publication .public-block p span {
+  display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  .publication .public-block p span {
+    display: inline;
+  }
+}
+
+.publication .public-block .more {
+  margin-top: 10px;
+}
+
+.publication .public-block .more span {
+  color: #377CCF;
+  border-bottom: 2px solid #377CCF;
+  padding-bottom: 2px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1360,6 +1406,10 @@ a {
   transition: width 0.3s;
 }
 
+.quiz .btn, .result .btn {
+  position: relative;
+}
+
 .quiz .btn:not(.btn-link), .result .btn:not(.btn-link) {
   border-radius: 100px;
   border: 0;
@@ -1412,6 +1462,14 @@ a {
 .quiz .btn:not(.btn-link):hover {
   color: white;
   background-color: #e89b56;
+}
+
+.quiz .btn:not(.btn-link) img {
+  position: absolute;
+  bottom: -15px;
+  right: 20px;
+  width: 55px;
+  display: none;
 }
 
 .quiz.quiz-1 .btn-link {
