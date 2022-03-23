@@ -304,7 +304,7 @@ a {
 		&.cloud-1 {
 			width: 180px;
 			height: auto;
-			top: 13%;
+			top: 11%;
 			left: 20%;
 
 			animation-name:cloud-1;
@@ -312,9 +312,9 @@ a {
 			// animation-timing-function:ease-in;
 			animation-iteration-count:infinite;
 			@keyframes cloud-1{
-				0%{ top:13%; }
-				50%{ top:18%; }
-				100%{ top:13%; }
+				0%{ top:11%; }
+				50%{ top:16%; }
+				100%{ top:11%; }
 			}
 
 			@include mobile {
@@ -325,7 +325,7 @@ a {
 		&.cloud-2 {
 			width: 172px;
 			height: auto;
-			top: 20%;
+			top: 25%;
 			right: 15%;
 
 			animation-name:cloud-2;
@@ -333,9 +333,9 @@ a {
 			// animation-timing-function:ease-in;
 			animation-iteration-count:infinite;
 			@keyframes cloud-2{
-				0%{ top:20%; }
-				50%{ top:16%; }
-				100%{ top:20%; }
+				0%{ top:25%; }
+				50%{ top:21%; }
+				100%{ top:25%; }
 			}
 
 			@include mobile {
