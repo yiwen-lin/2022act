@@ -105,26 +105,50 @@ const result = [
 
 let str = '';
 question.forEach((item, index) => {
-  const template = `<div class="quiz quiz-${index+1}"><h4 class="mb-4">${item.title}</h4>
-  <button
-    type="button"
-    class="btn-option btn w-full py-4 px-5 mt-3 mb-2"
-    data-index="${index+1}"
-    data-score="${item.option[0].score}"
-    eventcategory="web_web"
-    eventaction="advance-decision"
-    eventlabel="click-test-${index+1}-1"
-  >${item.option[0].content}</button>
-  <button
-    type="button"
-    class="btn-option btn w-full py-4 px-5 mt-3 mb-2"
-    data-index="${index+1}"
-    data-score="${item.option[1].score}"
-    eventcategory="web_web"
-    eventaction="advance-decision"
-    eventlabel="click-test-${index+1}-2"
-  >${item.option[1].content}</button>
-  <button 
+  let template = `<div class="quiz quiz-${index+1}"><h4 class="mb-4">${item.title}</h4>`;
+  if ( item.option[0].score > 0 ) {
+    template += `<button
+      type="button"
+      class="btn-option btn w-full py-4 px-5 mt-3 mb-2"
+      data-index="${index+1}"
+      data-score="${item.option[0].score}"
+      eventcategory="web_web"
+      eventaction="advance-decision"
+      eventlabel="click-test-${index+1}-1"
+    >${item.option[0].content}<img src="assets/images/ans-right.png" alt="正確icon"></button>`;
+  } else {
+    template += `<button
+      type="button"
+      class="btn-option btn w-full py-4 px-5 mt-3 mb-2"
+      data-index="${index+1}"
+      data-score="${item.option[0].score}"
+      eventcategory="web_web"
+      eventaction="advance-decision"
+      eventlabel="click-test-${index+1}-1"
+    >${item.option[0].content}<img src="assets/images/ans-wrong.png" alt="錯誤icon"></button>`;
+  }
+  if ( item.option[1].score > 0 ) {
+    template += `<button
+      type="button"
+      class="btn-option btn w-full py-4 px-5 mt-3 mb-2"
+      data-index="${index+1}"
+      data-score="${item.option[1].score}"
+      eventcategory="web_web"
+      eventaction="advance-decision"
+      eventlabel="click-test-${index+1}-1"
+    >${item.option[1].content}<img src="assets/images/ans-right.png" alt="正確icon"></button>`;
+  } else {
+    template += `<button
+      type="button"
+      class="btn-option btn w-full py-4 px-5 mt-3 mb-2"
+      data-index="${index+1}"
+      data-score="${item.option[1].score}"
+      eventcategory="web_web"
+      eventaction="advance-decision"
+      eventlabel="click-test-${index+1}-1"
+    >${item.option[1].content}<img src="assets/images/ans-wrong.png" alt="錯誤icon"></button>`;
+  }
+  template += `<button 
     type="button" 
     class="btn-back btn btn-link d-table mx-auto mt-3 mb-2" 
     data-prev="${index}"
@@ -144,14 +168,21 @@ let sumArray = [];
 $('.quiz button').click(function(e) {
   const buttonScore = $(this).attr('data-score');
   const buttonIndex = $(this).attr('data-index');
-  console.log(buttonIndex);
+  // console.log(buttonIndex);
   if ( $(this).hasClass('btn-option') ) {
     if ( buttonIndex < 6 ) {
-      $('.quiz-wrap').css('margin-left', `${-100 * buttonIndex}%`);
       sumArray.push(Number(buttonScore));
-      $('.progress-number .h2').text(Number(buttonIndex)+1);
-      $('.progress-line .line').css('width', 16.666666666666667 * (Number(buttonIndex)+1)+'%');
+      $(this).children('img').fadeIn();
+      setTimeout(function(){
+        $('.quiz-wrap').css('margin-left', `${-100 * buttonIndex}%`);
+        $('.progress-number .h2').text(Number(buttonIndex)+1);
+        $('.progress-line .line').css('width', 16.666666666666667 * (Number(buttonIndex)+1)+'%');
+      }, 700)
+      setTimeout(function(){
+        $('.quiz button img').hide();
+      }, 1000)
     } else {
+      sumArray.push(Number(buttonScore));
       calculate();
       renew();
       $('.result').show();
@@ -160,7 +191,7 @@ $('.quiz button').click(function(e) {
   } else if ( $(this).hasClass('btn-back') ) {
     sumArray.pop();
   }
-  console.log(sumArray);
+  // console.log(sumArray);
 });
 
 $('.btn-back').click(function(e) {
@@ -175,7 +206,7 @@ function calculate() {
   sumArray.forEach(item => {
     sum += item;
   });
-  console.log(sum);
+  // console.log(sum);
 
   let resultCopy = {
     name: '',
@@ -184,19 +215,19 @@ function calculate() {
   };
   switch (true) {
     case (sum <= 59):
-      resultCopy.name =     result[0].name;
-      resultCopy.content =  result[0].content;
-      resultCopy.link =     result[0].link;
+      resultCopy.name     = result[0].name;
+      resultCopy.content  = result[0].content;
+      resultCopy.link     = result[0].link;
       break;
     case (sum <= 70):
-      resultCopy.name =     result[1].name;
-      resultCopy.content =  result[1].content;
-      resultCopy.link =     result[1].link;
+      resultCopy.name     = result[1].name;
+      resultCopy.content  = result[1].content;
+      resultCopy.link     = result[1].link;
       break;
     case (sum <= 100):
-      resultCopy.name =     result[2].name;
-      resultCopy.content =  result[2].content;
-      resultCopy.link =     result[2].link;
+      resultCopy.name     = result[2].name;
+      resultCopy.content  = result[2].content;
+      resultCopy.link     = result[2].link;
       break;
   }
 
