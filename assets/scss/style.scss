@@ -192,7 +192,7 @@ a {
 
 		//txt
 		.title-wrap {
-			margin-top: 8%;
+			margin-top: 6%;
 
 			.sub-title {
 				background-color: #C1E5E4;
@@ -206,7 +206,7 @@ a {
 			.op-title {
 				display: block;
 				margin: 24px auto 0;
-				width: 310px;
+				width: 410px;
 
 				// animation-name:title;
 				// animation-duration:6s;
@@ -290,7 +290,7 @@ a {
 			}
 		}
 		@include up-mobile { 
-			width: 63vh;
+			width: 58vh;
 		}
 		@include mobile { 
 			width: 75%;
@@ -1125,6 +1125,7 @@ a {
 
 		&.answer4 {
 			width: 100%;
+			margin-bottom: 0;
 
 			&::before {
 				display: block;
@@ -1163,7 +1164,7 @@ a {
 
 	.accordion__group .accordion__item__header {
 		position: relative;
-		padding: 0.65em 1.125em;
+		padding: 0.65em 2em 0.65em 1.125em;
 		color: #171717;
 		cursor: pointer;
 		-moz-transition: background-color, .3s;
@@ -1226,6 +1227,12 @@ a {
 
 // publication 出版商品導購區塊 -------------------------------
 .publication {
+	.public-wrap {
+		margin-bottom: 50px;
+		@include mobile {
+			margin-bottom: 0;
+		}
+	}
 	.public-block {
 		padding: 0 20px;
 		text-align: center;
@@ -1238,37 +1245,40 @@ a {
 
 		a {
 			color: #373737;
-
+			display: block;
 			&:hover {
 				color: $color-primary;
-			}
-		}
+			}	
 
-		p {
-			margin-top: 12px;
-			font-weight: 400;
-			line-height: 1.5;
-			span {
-				display: block;
-				@include mobile {
-					display:inline;
+			.more {
+				margin-top: 10px;
+				span {
+					color: $color-primary;
+					border-bottom: 2px solid $color-primary;
+					padding-bottom: 2px;	
+				}
+			}
+			p {
+				margin-top: 12px;
+				font-weight: 400;
+				line-height: 1.5;
+				span {
+					display: block;
+					@include mobile {
+						display:inline;
+					}
 				}
 			}
 		}
-		.more {
-			margin-top: 10px;
-			span {
-				color: $color-primary;
-				border-bottom: 2px solid $color-primary;
-				padding-bottom: 2px;
-			}
-		}
+
+		
+
 
 		@include mobile {
-			margin-bottom: 30px;
+			margin-bottom: 40px;
 
 			&:nth-last-child(1) {
-				margin-bottom: 0;
+				// margin-bottom: 0;
 			}
 		}
 	}
